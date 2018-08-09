@@ -1,0 +1,65 @@
+﻿
+.select_behaviour {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*padding: 5px 3px;*/
+    padding-left: 12px;
+}
+
+.min_lbl_width {
+    min-width: 158px;
+    text-align: left;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.googleMap {
+    height: 223px;
+    /*width: 78vw;*/
+    position: relative;
+    overflow: hidden;
+    margin-top: -8px
+}
+
+/*@media (min-width: 1000px) {
+    .navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+}*/
+
+.labeHeader{
+    min-width:207px;
+    white-space:nowrap;
+}
+
+/*.headerLabel {
+    text-align: center;
+    margin-top: 5px;
+}*/
+
+/*.padingLeftDisable{
+    padding-left:0px;
+}
+
+.padingRightDisable {
+    padding-right: 0px;
+}
+
+.marginTop15px{
+    margin-top:15px;
+}*/
+
+    /*@media (min-width: 1200px) {
+    .googleMap {
+        height: 223px;
+        width: 1168px;
+        position: relative;
+        overflow: hidden;
+        margin-top: -10px
+    }
+}*/

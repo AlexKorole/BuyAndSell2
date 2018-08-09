@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/offerslist.css" rel="stylesheet" />
+    <link href="DataTable/datatables.css" rel="stylesheet" />
+    <link href="ImgUploader/css/imgCarousel.css" rel="stylesheet" />
+</head>
+<body>
+    <!--<div style="width:100%; height:200px"></div>-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Купи! Продай!</a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="navbar-form navbar-right" style="padding-top: 2px">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <input id="isAdmin" type="checkbox" checked aria-label="adminArea" value="isAdmin">
+                        </span>
+                        <span class="input-group-addon">Админ</span>
+                    </div>
+                </div>    
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Seller.html">Подать объявление</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Поиск по объявлениям">
+                    </div>
+                    <button type="submit" class="btn btn-default">Найти</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Выберите категорию <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Одежда</a></li>
+                            <li><a href="#">Бытовая техника</a></li>
+                            <li><a href="#">Посуда</a></li>
+                            <li><a href="#">Детские игрушки</a></li>
+                        </ul>
+                    </li>
+                </ul>
+</div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 hidden-sm"></div>
+            <div class="col-md-10 col-sm-12">
+
+                <!--<thead>
+                    <tr>
+                        <th><span id="mainCollapse">V</span></th>
+                        <th>Название</th>
+                        <th>Адрес</th>
+                        <th>Текущая цена</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span id="mainCollapse1" onclick="">V</span></td>
+                        <td>Комбинезон</td>
+                        <td>Спб. м.Акад.</td>
+                        <td>500</td>
+                        <td>Нет покупателя</td>
+                    </tr>
+                    <tr>
+                        <td><span id="mainCollapse2" onclick="">V</span></td>
+                        <td>Дет. костюм</td>
+                        <td>Спб. м. Спорт</td>
+                        <td>400</td>
+                        <td>Купят дешевле: 2</td>
+                    </tr>
+                </tbody>-->
+
+
+
+                <table align="center" id="offerListTable" class="display nowrap">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Название</th>
+                            <th>Адрес</th>
+                            <th>Текущая цена (руб.)</th>
+                            <th>Телефон продавца</th>
+                            <th>Статус цены</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="col-md-1 hidden-sm"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Фотографии</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="theCarousel" class="carousel slide" data-interval="false">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li id='imgCarousel1_Point' data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                            <li id='imgCarousel2_Point' data-target="#theCarouse2" data-slide-to="1"></li>
+                            <li id='imgCarousel3_Point' data-target="#theCarouse3" data-slide-to="2"></li>
+                            <li id='imgCarousel4_Point' data-target="#theCarouse4" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner img_container">
+                            <div class="item active">
+                                <img id="imgCarousel1" src="ImgUploader/img/PhotoTemplate.jpg" alt="Изображение 1" class="img-responsive img-responsive_center carousel_img imgCarouselBtn">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img id="imgCarousel2" src="ImgUploader/img/PhotoTemplate.jpg" alt="Изображение 2" class="img-responsive img-responsive_center carousel_img imgCarouselBtn">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img id="imgCarousel3" src="ImgUploader/img/PhotoTemplate.jpg" alt="Изображение 3" class="img-responsive img-responsive_center carousel_img imgCarouselBtn">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img id="imgCarousel4" width="800" src="ImgUploader/img/PhotoTemplate.jpg" alt="Изображение 4" class="img-responsive img-responsive_center carousel_img imgCarouselBtn">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a href="#theCarousel" class="carousel-control left" data-slide="prev"><span class="icon-prev"></span></a>
+                        <a href="#theCarousel" class="carousel-control right" data-slide="next"><span class="icon-next"></span></a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JQuery/jquery-3.2.1.js"></script>
+    <script src="DataTable/datatables.js"></script>
+    <script src="DataTable/dataTables.anyNumber.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/OffersList/priceBehavior.js"></script>
+    <script src="js/OffersList/utils/moment.js"></script>
+    <script src="js/OffersList/offersListAutoUpdate.js"></script>
+    <script src="js/OffersList/offersList.js"></script>
+</body>
+</html>

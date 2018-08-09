@@ -1,0 +1,25 @@
+﻿body {
+    padding-top:10px;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.popover-content {
+   white-space:nowrap;
+}
+
+table.dataTable thead th {
+    text-align: center;
+}
+
+.btnShowPhone 
+{
+    height:18px;
+    line-height:0;
+}
+
+/*table, th, td {
+    border: 1px solid black;
+}*/

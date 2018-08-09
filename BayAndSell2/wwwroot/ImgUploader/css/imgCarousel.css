@@ -1,0 +1,29 @@
+﻿.img-responsive_center {
+    /*margin: 0 auto;*/
+    display:inline-block !important;
+}
+
+.img_container {
+    /*height: 228px !important;*/
+    background-color: #DCDCDC;
+    height: 228px;
+    line-height: 228px;
+    vertical-align: middle;
+    text-align: center;
+    /*height: 70vh;*/
+}
+
+@media (min-width: 992px) {
+    .img_container {
+        height: 512px;
+        /*height: 465px;*/
+        line-height: 512px;
+        /*line-height: 465px;*/
+        vertical-align: middle;
+    }
+}
+
+.imgCarouselBtn {
+    cursor: pointer
+}
+
