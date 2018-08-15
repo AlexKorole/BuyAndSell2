@@ -98,22 +98,22 @@ namespace BayAndSell2.Domain.Models
             int multix = 0;
             switch (perTimeDown)
             {
-                case "секунда":
+                case "second":
                     multix = Convert.ToInt32((DateTime.Now - createdDate).TotalSeconds);
                     break;
-                case "минута":
+                case "minute":
                     multix = Convert.ToInt32((DateTime.Now - createdDate).TotalMinutes);
                     break;
-                case "час":
+                case "hour":
                     multix = Convert.ToInt32((DateTime.Now - createdDate).TotalHours);
                     break;
-                case "день":
+                case "day":
                     multix = Convert.ToInt32((DateTime.Now - createdDate).TotalDays);
                     break;
-                case "неделя":
+                case "week":
                     multix = Convert.ToInt32((DateTime.Now - createdDate).TotalDays / 7);
                     break;
-                case "месяц":
+                case "month":
                     multix = Convert.ToInt32((DateTime.Now - createdDate).TotalDays / 30);
                     break;
             }

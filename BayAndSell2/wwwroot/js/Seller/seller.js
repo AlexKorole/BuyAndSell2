@@ -127,7 +127,7 @@
                 $('#inSHidGuid').val(guid);
                 $sentAlert.removeClass('alert-danger');
                 $sentAlert.addClass('alert-success');
-                $('#pMsg').text('Данные успешно отправленны на сервер!')
+                $('#pMsg').text('The data has been sent to the server successfully!')
                 $sentAlert.show();
                 SetCreateEditLabels(guid);
                 setTimeout(hideMsg,1000);
@@ -149,14 +149,14 @@
 
     function SetCreateEditLabels(guid) {
         if (guid) {
-            $('#sendBtn').html('Сохранить изменения');
-            $('#lblHeader').text("Объявление № '" + guid);
+            $('#sendBtn').html('Save changes');
+            $('#lblHeader').text("Listing № '" + guid);
             $('#lblHeaderXS').text(guid);
             $("#drpDownAllAdvts option[value='" + guid + "']").prop('selected', true);
         } else {
-            $('#sendBtn').html('Создать объявление');
-            $('#lblHeader').text("Новое объявлление!");
-            $('#lblHeaderXS').text("Новое объявлление!");
+            $('#sendBtn').html('Create listing');
+            $('#lblHeader').text("New listing!");
+            $('#lblHeaderXS').text("New listing!");
         }
     }
 

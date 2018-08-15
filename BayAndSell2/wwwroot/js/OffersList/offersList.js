@@ -261,28 +261,29 @@ function GetAdditionalDatafromServer(id) {
         //https: //datatables.net/manual/styling/bootstrap
         $('#offerListTable').DataTable({
             width: "100%",
-            language: {
-                "processing": "Подождите...",
-                "search": "Поиск в найденном:",
-                "lengthMenu": "Показать _MENU_ записей",
-                "info": "Записи с _START_ до _END_ из _TOTAL_ записей",
-                "infoEmpty": "Записи с 0 до 0 из 0 записей",
-                "infoFiltered": "(отфильтровано из _MAX_ записей)",
-                "infoPostFix": "",
-                "loadingRecords": "Загрузка записей...",
-                "zeroRecords": "Записи отсутствуют.",
-                "emptyTable": "В таблице отсутствуют данные",
-                "paginate": {
-                    "first": "Первая",
-                    "previous": "Предыдущая",
-                    "next": "Следующая",
-                    "last": "Последняя"
-                }
-            },
-            aria: {
-                "sortAscending": ": активировать для сортировки столбца по возрастанию",
-                "sortDescending": ": активировать для сортировки столбца по убыванию"
-            },
+            // comment if English
+            //language: {
+            //    "processing": "Подождите...",
+            //    "search": "Поиск в найденном:",
+            //    "lengthMenu": "Показать _MENU_ записей",
+            //    "info": "Записи с _START_ до _END_ из _TOTAL_ записей",
+            //    "infoEmpty": "Записи с 0 до 0 из 0 записей",
+            //    "infoFiltered": "(отфильтровано из _MAX_ записей)",
+            //    "infoPostFix": "",
+            //    "loadingRecords": "Загрузка записей...",
+            //    "zeroRecords": "Записи отсутствуют.",
+            //    "emptyTable": "В таблице отсутствуют данные",
+            //    "paginate": {
+            //        "first": "Первая",
+            //        "previous": "Предыдущая",
+            //        "next": "Следующая",
+            //        "last": "Последняя"
+            //    }
+            //},
+            //aria: {
+            //    "sortAscending": ": активировать для сортировки столбца по возрастанию",
+            //    "sortDescending": ": активировать для сортировки столбца по убыванию"
+            //},
             destroy: true,
             //"processing": true,
             //"serverSide": true,
@@ -321,7 +322,7 @@ function GetAdditionalDatafromServer(id) {
                     "data": null//"statusName"
                     , render: function (data, type, row) {
                         // obj.push({ "UniqueGuid": row.uniqueGuid, "lastPrice": row.lastPrice, "statusName": row.statusName, "statusId": row.statusId, "PossibleFinishTime": row.PossibleFinishTime });
-                        return `<div id='divShowPhone_` + row.uniqueGuid + `' style="width:100%; text-align:center"><button id='btnShowPhone_` + row.uniqueGuid + `' onclick='ClickShowPhone(this)' class="btnShowPhone btn btn-xs btn-default outline" type="button">Показать телефон!</button></div>`;
+                        return `<div id='divShowPhone_` + row.uniqueGuid + `' style="width:100%; text-align:center"><button id='btnShowPhone_` + row.uniqueGuid + `' onclick='ClickShowPhone(this)' class="btnShowPhone btn btn-xs btn-default outline" type="button">Show phone!</button></div>`;
                     }
                 },
                 {
@@ -331,7 +332,7 @@ function GetAdditionalDatafromServer(id) {
                         var res = SetStatusText(row);
                         SetPopover(row.uniqueGuid);
                         return `<div style="width:100%;text-align:left">
-                            <span id="popBtn_` + row.uniqueGuid + `" rel="popover" data-original-title="Информация" data-content="` + res.textInfo + `">` + glifconI + `</span>
+                            <span id="popBtn_` + row.uniqueGuid + `" rel="popover" data-original-title="Info" data-content="` + res.textInfo + `">` + glifconI + `</span>
                             <span id="spanInfo_` + row.uniqueGuid + `">` + res.textStatus + `</span>`;
                     }
                 }

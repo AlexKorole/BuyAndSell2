@@ -39,8 +39,8 @@ function SetStatusText(row) {
 
 // Status default
 function StatusDefault(row) {
-    var textStatus = "Окончательная цена";
-    var textInfo = "Цена дальше меняется";
+    var textStatus = "Final price";
+    var textInfo = "The price changes further";
     if (!$("#iStatusGlifDown_" + row.uniqueGuid)) return { textInfo: textInfo, textStatus: textStatus };
     $("#iStatusGlifDown_" + row.uniqueGuid).hide();
     $("#iStatusGlifUp_" + row.uniqueGuid).hide();
@@ -54,8 +54,8 @@ function MaxToMin(row) {
     var stepDown = row.stepDown;
     var periodDuration = row.periodDuration;
 
-    var textInfo = "Цена уменьшается на " + stepDown + " руб. в " + periodDuration + " " + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ". ") : row.perTimeDown);
-    var textStatus = stepDown + ` руб. в ` + periodDuration + ` ` + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ".") : row.perTimeDown);
+    var textInfo = "The price decreases by " + stepDown + " $ per " + periodDuration + " " + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ". ") : row.perTimeDown);
+    var textStatus = stepDown + ` $ per ` + periodDuration + ` ` + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ".") : row.perTimeDown);
     var resObj = { textInfo: textInfo, textStatus: textStatus };
 
     if (row.currentPrice == row.minPrice) {
@@ -73,8 +73,8 @@ function MinToMax(row) {
     var stepDown = row.stepDown;
     var periodDuration = row.periodDuration;
 
-    var textInfo = "Цена увеличивается на " + stepDown + " руб. в " + periodDuration + " " + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ". ") : row.perTimeDown);
-    var textStatus = stepDown + ` руб. в ` + periodDuration + ` ` + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ".") : row.perTimeDown);
+    var textInfo = "The price increases by " + stepDown + " $ per " + periodDuration + " " + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ". ") : row.perTimeDown);
+    var textStatus = stepDown + ` $ per ` + periodDuration + ` ` + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ".") : row.perTimeDown);
     var resObj = { textInfo: textInfo, textStatus: textStatus };
     if (row.currentPrice == row.startPrice) {
         resObj = StatusDefault(row);
@@ -91,8 +91,8 @@ function Random(row) {
     var stepDown = row.stepDown;
     var periodDuration = row.periodDuration;
 
-    var textInfo = "Cлучайная цена от " + row.minPrice + " до " + row.startPrice;
-    var textStatus = `случайно, раз в ` + periodDuration + ` ` + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ".") : row.perTimeDown);
+    var textInfo = "Random price from " + row.minPrice + " to " + row.startPrice;
+    var textStatus = `randomly, once per ` + periodDuration + ` ` + (row.perTimeDown.length > 4 ? (row.perTimeDown.substring(0, 3) + ".") : row.perTimeDown);
     var resObj = { textInfo: textInfo, textStatus: textStatus };
     //if (row.currentPrice == row.startPrice) {
     //    resObj = StatusDefault(row);

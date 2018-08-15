@@ -12,8 +12,8 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <label class="navbar-brand labeHeader hidden-xs" id="lblHeader" href="#">Новое объявление!</label> <!--navbar-center-->
-                    <label class="navbar-brand labeHeader visible-xs" id="lblHeaderXS" href="#">Новое объявление!</label><!--navbar-center-->
+                    <label class="navbar-brand labeHeader hidden-xs" id="lblHeader" href="#">New listing!</label> <!--navbar-center-->
+                    <label class="navbar-brand labeHeader visible-xs" id="lblHeaderXS" href="#">New listing!</label><!--navbar-center-->
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -24,9 +24,9 @@
                     <div class="form-group input-group">
                         <select id="drpDownAllAdvts" class="form-control" aria-describedby="sizing-addon2"></select>
                         <span class="input-group-addon " id="sizing-addon2">№</span>
-                        <input type="text" step="1" class="form-control" id="inputFIeldLoadItem" placeholder="Id объявления" aria-describedby="sizing-addon2">
+                        <input type="text" step="1" class="form-control" id="inputFIeldLoadItem" placeholder="Listing id" aria-describedby="sizing-addon2">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" id="btnLoadItem" type="button">Загрузить!</button>
+                            <button class="btn btn-default" id="btnLoadItem" type="button">Load</button>
                         </span>
                     </div>
                 </div>
@@ -36,19 +36,19 @@
         <div class="container">
             <div class="row">
                 <div class="form-group">
-                    <label class="control-label">Выберите категорию</label>
+                    <label class="control-label">Choose a category</label>
                     <select class="form-control" name="sCategory">
-                        <option>Недвижимость</option>
-                        <option>Автомобили</option>
-                        <option selected>Одежда</option>
-                        <option>Бытовая электроника</option>
+                        <option>Real estate</option>
+                        <option>Auto</option>
+                        <option selected>Clothes</option>
+                        <option>Consumer electronics</option>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4" id="dPhoto">
                     <div class="row">
-                        <label id="lblPhoto">Фотографии</label>
+                        <label id="lblPhoto">Photos</label>
                         <!--<div>
                             <img src="img/comb.jpg" class="img-thumbnail" name="imgSeller1" />
                         </div>-->
@@ -126,47 +126,47 @@
                 <div class="col-md-8" id="dInfo">
                     <div class="row">
                         <div class="form-group">
-                            <label>Название:</label>
-                            <input class="form-control hidden-xs" placeholder="Название" name="inpSAdvertName" />
-                            <textarea cols="40" rows="6" class="form-control visible-xs" placeholder="Название" name="taSAdvertName"></textarea>
+                            <label>Header:</label>
+                            <input class="form-control hidden-xs" placeholder="Header" name="inpSAdvertName" />
+                            <textarea cols="40" rows="6" class="form-control visible-xs" placeholder="Header" name="taSAdvertName"></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group">
-                            <label>Текст объявления:</label>
-                            <textarea cols="40" rows="2" class="form-control" placeholder="Текст объявления" name="taSText"></textarea>
+                            <label>Text:</label>
+                            <textarea cols="40" rows="2" class="form-control" placeholder="Listing text" name="taSText"></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><i class="glyphicon glyphicon-earphone visible-xs"></i><span class="hidden-xs">Телефон</span></span>
+                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><i class="glyphicon glyphicon-earphone visible-xs"></i><span class="hidden-xs">Phone</span></span>
                             <input type="text" step="1" class="form-control" aria-describedby="sizing-addon2" name="inpSPhone">
                         </div>
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><span class="visible-xs">Имя</span><span class="hidden-xs">Имя</span></span>
+                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><span class="visible-xs">Name</span><span class="hidden-xs">Name</span></span>
                             <input type="text" step="1" class="form-control" aria-describedby="sizing-addon2" name="inpUserName">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><span class="visible-xs">Макс. цена&nbsp;</span><span class="hidden-xs">Максимальная цена</span></span>
+                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><span class="visible-xs">Max price&nbsp;</span><span class="hidden-xs">Max price</span></span>
                             <input type="number" step="1" class="form-control" aria-describedby="sizing-addon2" name="inpStartPrice">
-                            <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-ruble visible-xs"></i><span class="hidden-xs">руб.</span></span>
+                            <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-ruble visible-xs"></i><span class="hidden-xs">$</span></span>
                         </div>
 
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon" id="sizing-addon2"><span class="visible-xs">Мин. цена</span><span class="hidden-xs">Минимальная цена</span></span>
+                            <span class="min_lbl_width input-group-addon" id="sizing-addon2"><span class="visible-xs">Min price</span><span class="hidden-xs">Min price</span></span>
                             <input type="number" step="1" class="form-control" aria-describedby="sizing-addon2" name="inpMinPrice">
-                            <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-ruble visible-xs"></i><span class="hidden-xs">руб.</span></span>
+                            <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-ruble visible-xs"></i><span class="hidden-xs">$</span></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><i class="glyphicon glyphicon-arrow-down visible-xs"></i><span class="hidden-xs">Изменение цены на</span></span>
+                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><i class="glyphicon glyphicon-arrow-down visible-xs"></i><span class="hidden-xs">Price is changing on</span></span>
                             <input type="number" step="1" class="form-control" aria-describedby="sizing-addon2" name="inpStepDown">
-                            <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-ruble visible-xs"></i><span class="hidden-xs">руб.</span></span>
+                            <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-ruble visible-xs"></i><span class="hidden-xs">$</span></span>
 
-                            <span class="input-group-addon" id="sizing-addon2">&nbsp;шаг&nbsp;</span>
+                            <span class="input-group-addon" id="sizing-addon2">&nbsp;step&nbsp;</span>
                             <select class="form-control" aria-describedby="sizing-addon2" name="selDurationPerTimeDown">
                                 <option selected>1</option>
                                 <option>2</option>
@@ -181,39 +181,39 @@
                             </select>
                             <span class="input-group-addon" id="sizing-addon2"></span>
                             <select class="form-control" aria-describedby="sizing-addon2" name="selPerTimeDown">
-                                <option>секунда</option>
-                                <option>минута</option>
-                                <option>час</option>
-                                <option selected>день</option>
-                                <option>неделя</option>
-                                <option>месяц</option>
+                                <option>second</option>
+                                <option>minute</option>
+                                <option>hour</option>
+                                <option selected>day</option>
+                                <option>week</option>
+                                <option>month</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon" id="sizing-addon2">Поведение цены:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="min_lbl_width input-group-addon" id="sizing-addon2">Price behaviour:&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             <select class="select_behaviour form-control" aria-describedby="sizing-addon2" id="priceBehavior" name="priceBehavior">
-                                <option value="MaxToMin" selected>Снижение цены от максимальной к минимальной</option>
-                                <option value="MinToMax">Повышение цены от минимальной к максимальной</option>
-                                <option value="Random">Случайное изменение цены, в диапазоне от минимальной к максимальной</option>
-                                <option value="FixedMax">Фиксированная цена, равная максимальной</option>
-                                <option value="FixedMin">Фиксированная цена, равная минимальной</option>
+                                <option value="MaxToMin" selected>Price decreases from maximum to minimum</option>
+                                <option value="MinToMax">Price increases from minimum to maximum</option>
+                                <option value="Random">Random price changing, in the range from minimum to maximum</option>
+                                <option value="FixedMax">Fixed price is equal to the maximum</option>
+                                <option value="FixedMin">Fixed price is equal to the minimum</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><span class="visible-xs">Адрес&nbsp;&nbsp;&nbsp;</span><span class="hidden-xs">Адрес</span></span>
-                            <input type="text" id="address" step="1" class="form-control" value="Санкт-Петербург" aria-describedby="sizing-addon2" name="inpSAddress">
+                            <span class="min_lbl_width input-group-addon " id="sizing-addon2"><span class="visible-xs">Address&nbsp;&nbsp;&nbsp;</span><span class="hidden-xs">Address</span></span>
+                            <input type="text" id="address" step="1" class="form-control" value="Saint-Petersburg" aria-describedby="sizing-addon2" name="inpSAddress">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" onclick="showAddress($('#address').val())" type="button">Найти!</button>
+                                <button class="btn btn-default" onclick="showAddress($('#address').val())" type="button">Search</button>
                             </span>
                         </div>
                         <div class="form-group input-group">
-                            <span class="min_lbl_width input-group-addon" id="sizing-addon2"><span class="visible-xs">Точный Адрес</span><span class="hidden-xs">Точный Адрес</span></span>
+                            <span class="min_lbl_width input-group-addon" id="sizing-addon2"><span class="visible-xs">Exact address</span><span class="hidden-xs">Exact address</span></span>
                             <span class="form-control" id="fullAddress" style="background-color:#eee"></span>
                             <input type="hidden" id="hdnFullAddress" name="inpSFullAddress" />
                         </div>
@@ -236,7 +236,7 @@
 
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <button type="submit" id="sendBtn" class="form-control btn btn-default">Создать объявление</button>
+                        <button type="submit" id="sendBtn" class="form-control btn btn-default">Create</button>
                     </div>
                 </div>
                 <div class="row">
@@ -257,9 +257,9 @@
     <script src="ImgUploader/js/exif.js"></script>
     <script src="ImgUploader/js/ImageUploader.js"></script>
     <script src="ImgUploader/js/imgCarousel.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?key=&sensor=true_OR_false&language=ru" type="text/javascript"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAkmX1lrpWb8hDgA4d_kL27bFzRLWT8Y6U&sensor=true_OR_false&language=en" type="text/javascript"></script>
     <script src="js/Seller/sellerGeo.js"></script>
-    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQFoQih0Tanl-Z8px3ucynxSNnSK_uzoY&callback=initMap&language=ru"></script>-->
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQFoQih0Tanl-Z8px3ucynxSNnSK_uzoY&callback=initMap&language=en"></script>-->
     <script src="js/Seller/seller.js"></script>
 
 </body>
